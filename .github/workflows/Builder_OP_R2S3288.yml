@@ -70,9 +70,9 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
-    - name: Configuration Customization - Build_x86_64
+    - name: Configuration Customization - Build_R2S3288_64
       env:
-        CONFIG_FILE: 'R2SRS3288.config'
+        CONFIG_FILE: 'R2S3288.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
